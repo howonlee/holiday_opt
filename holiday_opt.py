@@ -48,7 +48,9 @@ def get_holidays(year):
     holidays = [
         ("New Year's Day", datetime(year, 1, 1)),
         ("MLK Day", get_nth_weekday_of_month(year, 1, 0, 3)),  # 3rd Monday in January
+        ("President's Day", get_nth_weekday_of_month(year, 2, 0, 3)),  # 3rd Monday in February
         ("Memorial Day", get_last_weekday_of_month(year, 5, 0)),  # Last Monday in May
+        ("Juneteenth", datetime(year, 6, 19)),
         ("Independence Day", datetime(year, 7, 4)),
         ("Labor Day", get_nth_weekday_of_month(year, 9, 0, 1)),  # 1st Monday in September
         ("Thanksgiving Day", get_nth_weekday_of_month(year, 11, 3, 4)),  # 4th Thursday in November
